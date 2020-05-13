@@ -38,6 +38,8 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		C07DAA9B246C327B0083E2E1 /* SquareReaderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07DAA73246C327B0083E2E1 /* SquareReaderSDK.framework */; };
+		C07DAA9C246C327B0083E2E1 /* SquareReaderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C07DAA73246C327B0083E2E1 /* SquareReaderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0A06912246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A068E4246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework */; };
 		C0A06913246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A068E4246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0A0691F246C0C0E00A9D4D2 /* RNSquareInAppPayments-Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0A0691E246C0BD700A9D4D2 /* RNSquareInAppPayments-Resources.bundle */; };
@@ -344,6 +346,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C0A06913246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework in Embed Frameworks */,
+				C07DAA9C246C327B0083E2E1 /* SquareReaderSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +380,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		C07DAA73246C327B0083E2E1 /* SquareReaderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SquareReaderSDK.framework; sourceTree = "<group>"; };
 		C0A068E4246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SquareInAppPaymentsSDK.framework; path = SquareInAppPaymentsSDKs.framework/SquareInAppPaymentsSDK.framework; sourceTree = "<group>"; };
 		C0A06916246C0BD700A9D4D2 /* RNSquareInAppPayments.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSquareInAppPayments.xcodeproj; path = "../node_modules/react-native-square-in-app-payments/ios/RNSquareInAppPayments.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -407,6 +411,7 @@
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				C07DAA9B246C327B0083E2E1 /* SquareReaderSDK.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
@@ -560,6 +565,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C07DAA73246C327B0083E2E1 /* SquareReaderSDK.framework */,
 				C0A068E4246C0AF300A9D4D2 /* SquareInAppPaymentsSDK.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
@@ -1190,7 +1196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FRAMEWORKS=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\"${FRAMEWORKS}/SquareInAppPaymentsSDK.framework/setup\"\n";
+			shellScript = "FRAMEWORKS=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\"${FRAMEWORKS}/SquareInAppPaymentsSDK.framework/setup\"\n\"${FRAMEWORKS}/SquareReaderSDK.framework/setup\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1302,9 +1308,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SquareInAppPaymentsSDKs.framework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = plumpPlum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1325,9 +1333,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SquareInAppPaymentsSDKs.framework",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = plumpPlum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
